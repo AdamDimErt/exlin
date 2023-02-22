@@ -1,8 +1,9 @@
 .calc{
   position: relative;
+  margin-bottom: 60px;
 
 &__container{
-  width: 1280px;
+  max-width: 1280px;
   margin: auto;
   display: flex;
   flex-wrap: wrap;
@@ -27,6 +28,7 @@
   &__form{
     display: flex;
     flex-direction: column;
+
   }
   &__value{
     display: flex;
@@ -35,7 +37,35 @@
     margin-top: 30px;
   }
   &__price{
+    background-color: #DFF0D8;
 
+    border-radius: 20px;
+    max-width: 400px;
+    height: 400px;
+    padding: 20px;
+    margin: 60px auto 0;
+
+
+    h2{
+      display: flex;
+      margin-top: 100px;
+      align-items: center;
+      justify-content: center;
+    }
+    &__allPrice{
+      display: flex;
+
+      flex-direction: column;
+      justify-content: space-around;
+      height: 100%;
+      h1{
+        font-size: 48px;
+        text-align: center;
+      }
+      h3{
+        text-align: center;
+      }
+    }
   }
 }
 .modal{
@@ -47,4 +77,12 @@ position: absolute;
     .calc__box{
       flex-direction: column;
     }
+    .calc__container{
+      flex-direction: column;
+    }
+    .calc__form{
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
   }

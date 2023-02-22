@@ -1,0 +1,32 @@
+.main{
+  display: flex;
+  background-color: #006790;
+  height: 100vh;
+
+    background-image:url("../assets/secondMain.png") ;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: right center;
+  &__left{
+    width: 100%;
+    color: #fff;
+    padding: 100px;
+
+  }
+  &__right{
+    width: 50%;
+  }
+  .horizontal-gradient {
+    background: linear-gradient(to right, blue, pink);
+  }
+}
+.main__left_text{
+  h1{
+    width: 450px;
+    font-size: 50px;
+  }
+  p{
+    width: 400px;
+    margin-bottom: 20px;
+  }
+}

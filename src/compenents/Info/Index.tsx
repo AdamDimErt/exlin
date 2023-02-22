@@ -10,7 +10,7 @@ const Index = () => {
              <div className={styles.container}>
                 <div className={styles.container__info}>
                     <h2 className={styles.container__info_title}>
-                        Lorem ipsum dolor sit amet
+                        О компании
                     </h2>
                     <p className={styles.container__info_text}>
                         Наша команда профессионалов всегда готова предоставить нашим клиентам наилучший сервис и решить любые проблемы,

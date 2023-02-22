@@ -7,12 +7,14 @@ import Company from '@/compenents/company/Index'
 import Header from "@/compenents/Header";
 import SearchClient from '@/compenents/searchClient/Index'
 import Info from '@/compenents/Info/Index'
+import Main from '@/compenents/Main/Index'
 
 export default function Home() {
   return (
     <>
         <Header/>
-        <SearchClient/>
+        <Main/>
+
         <Info/>
       <MainCart/>
         <Calculator/>

@@ -1,6 +1,7 @@
 .container{
   width: 100%;
   display: flex;
+
   &__info{
     padding: 40px;
     width: 50%;
@@ -12,6 +13,32 @@
     &_text{
       line-height: 2;
     }
+    }
+
+}
+
+@media (max-width: 1024px) {
+  .container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+}
+
+  @media (max-width: 479px) {
+    .container{
+      padding: 40px;
+      width: 50%;
+      img{
+        border-radius: 20px;
+        width: 96%;
+        height: 92%;
+      }
+      &_text{
+        line-height: 1;
+      }
     }
 
 }

@@ -17,6 +17,7 @@
   justify-content: space-between;
   a{
     text-decoration: none;
+    color: #000;
   }
 }
 .address{
@@ -39,4 +40,19 @@
   display: flex;
   width: 70px ;
   justify-content: space-between;
+}
+@media (max-width: 479px) {
+.info{
+  padding: 20px;
+}
+  .containerFull{
+   display: flex;
+    flex-direction: column;
+  }
+  .map{
+    width: 100%;
+    ymaps-2-1-79-map{
+      width: 100%;
+    }
+  }
 }

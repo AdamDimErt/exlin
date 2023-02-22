@@ -50,8 +50,9 @@ type IPrice = {
 const Index = () => {
     const [sendCities, setSendCities] = useState<City[]>([]);
     const [getCities, setGetCities] = useState<City[]>([]);
-    const [price,setPrice] = useState<IPrice | undefined | null | any>()
+    const [price,setPrice] = useState<IPrice | undefined | null | any>({})
 
+    console.log(price)
     const { control, handleSubmit, formState: { errors } } = useForm<FormData>();
 
 
@@ -100,7 +101,6 @@ const Index = () => {
                 &declared_value=${data.declared_value}`)
 
             setPrice(response.data.calculation)
-            console.log(price)
         }catch (e){
             console.log(e)
         }
@@ -301,8 +301,20 @@ const Index = () => {
 
                 </form>
 
-                <div className="price">
-                    price
+                <div className={styles.calc__price}>
+                    { !price.price? <div>
+
+                        <h2 >Стоимость доставки еще не расчитана</h2>
+                        выберете пункты доставки и вес товара
+                    </div>:<div className={styles.calc__price__allPrice}>
+                        <h3>общая стоимость</h3>
+                        <h1 >{price.price + price.declared_value_fee+price.fuel_surplus}<span>тг</span></h1>
+                        <p>сумма доставки : <span style={{fontWeight:'bold',fontSize:18}}>{price.price}</span>тг</p>
+                        <p>Топплинвая надбавка: <span style={{fontWeight:'bold',fontSize:18}}>{price.fuel_surplus}</span>тг</p>
+                        <p>Cбор за ценность в {price.declared_value_fee*100} тг: <span style={{fontWeight:'bold',fontSize:18}}>{price.declared_value_fee} </span>тг</p>
+                        <p>(Сбор за ценность взимается с каждой единицы отправления, минимальный размер ценности одного отправления 15000 тенге)</p>
+                    </div>}
+
                 </div>
 
 

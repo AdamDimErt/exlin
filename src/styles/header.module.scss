@@ -3,8 +3,9 @@
   justify-content: space-between;
   align-items: center;
   padding: 10px 30px;
-  background-color: #f1f1f1;
+  background-color: #006790;
   position: relative;
+  color: #fff;
 }
 
 .logo {
@@ -33,14 +34,18 @@
 }
 
 .menu a {
-  color: #333;
+  color: #fff;
   text-decoration: none;
   font-size: 18px;
 }
 
 .phone {
-  font-size: 24px;
-  font-weight: bold;
+  font-size: 16px;
+
+a{
+  text-decoration: none;
+  color:#fff;
+}
 }
 
 /* стили для мобильных устройств */
@@ -56,7 +61,7 @@
     width: 100%;
     flex-direction: column;
     align-items: center;
-    background-color: #f1f1f1;
+    background-color: #006790;
     transition: all 0.3s;
     max-height: 0;
     overflow: hidden;
