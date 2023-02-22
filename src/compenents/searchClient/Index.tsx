@@ -37,7 +37,7 @@ const Index = () => {
         height:200
     };
     return (
-        <div className={styles}>
+        <div className={''}>
             <TextField type={'number'}
                        label="Номер номеклатуры"
 
