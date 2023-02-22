@@ -1,0 +1,17 @@
+.container{
+  width: 100%;
+  display: flex;
+  &__info{
+    padding: 40px;
+    width: 50%;
+      img{
+      border-radius: 20px;
+      width: 50vw;
+      height: 25vw;
+      }
+    &_text{
+      line-height: 2;
+    }
+    }
+
+}

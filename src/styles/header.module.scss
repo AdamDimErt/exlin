@@ -1,0 +1,92 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #f1f1f1;
+  position: relative;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.burger {
+  display: none; /* скрыть кнопку на десктопе */
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  margin-right: 20px;
+}
+
+.menu a {
+  color: #333;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.phone {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* стили для мобильных устройств */
+@media (max-width: 767px) {
+  .burger {
+    display: block; /* показать кнопку на мобильных устройствах */
+  }
+
+  .menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f1f1f1;
+    transition: all 0.3s;
+    max-height: 0;
+    overflow: hidden;
+  }
+
+  .menu.open {
+    max-height: 200px; /* высота меню при открытии */
+  }
+  .menu li {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .menu a {
+    font-size: 24px;
+  }
+
+  .phone {
+    display: none;
+  }
+
+  /* стили для мобильных устройств с шириной экрана менее 480px */
+  @media (max-width: 479px) {
+    .logo {
+      font-size: 20px;
+    }
+
+    .menu a {
+      font-size: 20px;
+    }
+  }
+
+}

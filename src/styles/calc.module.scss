@@ -1,0 +1,50 @@
+.calc{
+  position: relative;
+
+&__container{
+  width: 1280px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+&__error{
+  color:red;
+  font-size: 12px;
+  margin-bottom: 20px;
+}
+  &__inputMap{
+    width: 300px;
+    margin-right: 40px;
+
+}
+  &__box{
+    display: flex;
+    &_input{
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  &__form{
+    display: flex;
+    flex-direction: column;
+  }
+  &__value{
+    display: flex;
+
+    flex-direction: column;
+    margin-top: 30px;
+  }
+  &__price{
+
+  }
+}
+.modal{
+position: absolute;
+
+}
+
+  @media (max-width: 767px) {
+    .calc__box{
+      flex-direction: column;
+    }
+  }
