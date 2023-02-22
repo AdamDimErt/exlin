@@ -4,7 +4,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import SwiperCore, { Navigation, Pagination, Scrollbar, Autoplay, Mousewheel } from 'swiper';
-import { useMediaQuery } from '@material-ui/core';
+import { useMediaQuery } from '@mui/material';
 
 SwiperCore.use([Navigation, Pagination, Scrollbar, Autoplay, Mousewheel]);
 
