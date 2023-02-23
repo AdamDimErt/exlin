@@ -3,6 +3,11 @@
   margin-bottom: 60px;
   background: #F3F9FF;
   padding: 20px;
+  &__input{
+    label{
+      z-index: 0;
+    }
+  }
 
 &__container{
   max-width: 1280px;
@@ -16,7 +21,7 @@
   margin-bottom: 20px;
 }
   &__inputMap{
-    
+
     width: 300px;
     margin-right: 40px;
 

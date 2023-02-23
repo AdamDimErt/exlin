@@ -180,7 +180,7 @@ const Index = () => {
                         <Controller
                             name="weight"
                             control={control}
-                            defaultValue={0}
+
 
                             render={({ field: { onChange, value } }) => (
                                 <TextField
