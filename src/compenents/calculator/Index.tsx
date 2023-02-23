@@ -16,7 +16,7 @@ type IOption ={
     label: string | null;
 }
 const serviceOption:IOption[]  =[
-    { value: 'standard ', label: 'Стандарт' },
+    { value: 'standard', label: 'Стандарт' },
     { value: 'express', label: 'Экспресс' },
 
 ]
@@ -88,17 +88,10 @@ const Index = () => {
     const PostData = async (data:FormData)=>{
         try {
             console.log(data)
-
+            console.log(data.service)
             const response = await
-                axios.get(`https://api.exline.systems/public/v1/calculate?origin_id=
-                ${data.origin?.id}
-                &destination_id=${data.destination?.id}
-                &service=${data.service}
-                &weight=${data.weight}
-                &w=${data.width}
-                &l=${data.length}
-                &h=${data.height}
-                &declared_value=${data.declared_value}`)
+                // https://api.exline.systems/public/v1/calculate?origin_id=4&destination_id=3&service=standard&weight=0&w=0&l=0&h=0&declared_value=15000
+                axios.get(`https://api.exline.systems/public/v1/calculate?origin_id=${data.origin?.id}&destination_id=${data.destination?.id}&service=${data.service}&weight=${data.weight}&w=${data.width}&l=${data.length}&h=${data.height}&declared_value=${data.declared_value}`)
 
             setPrice(response.data.calculation)
         }catch (e){
@@ -187,7 +180,7 @@ const Index = () => {
                         <Controller
                             name="weight"
                             control={control}
-                            defaultValue={0.3}
+                            defaultValue={0}
 
                             render={({ field: { onChange, value } }) => (
                                 <TextField
@@ -201,7 +194,7 @@ const Index = () => {
                                     onChange={(event) => onChange(Number(event.target.value))}
                                     InputProps={{
                                         inputProps: {
-                                            min: 0.3
+                                            min: 0
                                         }
                                     }}
                                 />

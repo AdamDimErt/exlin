@@ -31,10 +31,8 @@ function Footer() {
                     <h2>Наши контакты</h2>
 
                     <div className={styles.telephone}>
-                        <a href="tel:+77273900300">+7 (727) 390-03-00</a>
-                        <a href="tel:+77273900301">+7 (727) 390-03-01</a>
-                        <a href="tel:+77273900302">+7 (727) 390-03-02</a>
-                        <a href="tel:+77273900303">+7 (727) 390-03-03</a>
+                        <a href="tel:+77076302770">+7(707)-630-27-70</a>
+
                     </div>
 
                     <div className={styles.address}>
