@@ -29,8 +29,12 @@
 
   @media (max-width: 479px) {
     .container{
-      padding: 40px;
-      width: 50%;
+      flex-direction:column;
+      width: 80%;
+      &__info{
+        padding: 15px;
+        width: 100%;
+      }
       img{
         border-radius: 20px;
         width: 96%;

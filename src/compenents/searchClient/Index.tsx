@@ -25,22 +25,38 @@ const Index = () => {
             setWaybill(null)
         }
     }
+    console.log(waybill)
 
     const style = {
         position: 'absolute' as 'absolute',
         top: '50%',
         left: '50%',
         transform: 'translate(-50%, -50%)',
-        width: 400,
+        width: '90%',
+        maxWidth: 500,
         bgcolor: '#fff',
         border: '2px solid #fff',
         boxShadow: 1000,
         p: 4,
         borderRadius:'20px',
         display:'flex',
-        justifyContent:'space-between',
-        flexDirection:'column',
-        height:200
+        justifyContent:'space-around',
+        flexDirection:'row',
+
+        height:300,
+        '@media (max-width: 600px)': {
+            flexDirection: 'column',
+            height: 'auto',
+            maxWidth: 300,
+        },
+        '@media (max-width: 400px)': {
+            width: 300,
+            maxWidth: '100%',
+        },
+        '@media (max-width: 360px)': {
+            width: 200,
+            maxWidth: '100%',
+        },
     };
     return (
       <>
@@ -65,14 +81,33 @@ const Index = () => {
                 aria-describedby="modal-modal-description"
             >
                 <Box sx={style}>
-                    <Typography id="modal-modal-title" variant="h6" component="h2">
-                        Номер накладной {waybill?.code}
-                    </Typography>
-                    <p>Отправитель:{waybill?.sender?.title}</p>
-                    <p>Адресс отправления:{waybill?.dest_region} {waybill?.orig_address}</p>
-                    <p>Получатель:{waybill?.receiver?.title}</p>
-                    <p>Вес поссылки:{waybill?.weight}</p>
+    <div className={styles.box}>
+        <Typography variant="h6" component="h2">
+            детали Накладной
+        </Typography>
+        <p id="modal-modal-title">
+            Номер накладной: {waybill?.code}
+        </p>
+        <p>Отправитель:{waybill?.sender?.title}</p>
+        <p>Адресс отправления:{waybill?.dest_region} {waybill?.orig_address}</p>
+        <p>Получатель:{waybill?.receiver?.title}</p>
+        <p>Вес поссылки:{waybill?.weight}</p>
+    </div>
+                    <div className="">
+                        <Typography id="modal-modal-title" variant="h6" component="h2">
+                            Детали доставки
+                        </Typography>
+                        {waybill?.deliveries?.map((delivery:any) => (
+                            <div className={styles.searchBox} key={delivery.status}>
+                               <p>Статус: {delivery.status == 'success'?  'Доставленно':  'Не доставленно'}</p>
+                                <p>{delivery.status == 'success'? `Принял товар:${delivery.receiver_name}`:  `Причина недоставки${delivery.description}`}</p>
+                                <div className={styles.underline}></div>
+                            </div>
+
+                        ))}
+                    </div>
                 </Box>
+
             </Modal>
 </>
     );

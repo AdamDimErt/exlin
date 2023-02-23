@@ -44,10 +44,10 @@ function Header() {
                 </li>
 
                 <li>
-                    <a href="#">Калькулятор</a>
+                    <a onClick={handleAnchorClick} href="#Calc">Калькулятор</a>
                 </li>
                 <li>
-                    <a href="#">Контакты</a>
+                    <a href="#Footer">Контакты</a>
                 </li>
             </ul>
             <div className={styles.phone}><a href="tel:+77076302770">+77076302770</a></div>

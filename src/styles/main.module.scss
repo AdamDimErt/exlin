@@ -42,3 +42,19 @@ margin: 100px 0 0 100px;
     margin: 20px 0 0 20px;
   }
 }
+@media (max-width: 420px) {
+  .main__left_text {
+    h1 {
+      width: 300px;
+      font-size: 20px;
+    }
+    p{
+      width: 300px;
+    }
+  }
+  .main__left{
+    width: 100%;
+    color: #fff;
+    margin: 20px 0 0 20px;
+  }
+}
