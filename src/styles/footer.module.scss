@@ -32,6 +32,19 @@
   padding: 60px;
 
 }
+.mail{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+  h2{
+    margin-bottom: 10px;
+  }
+  a{
+    display: flex;
+    color: #000;
+    text-decoration: none;
+  }
+}
 .icon{
   width: 30px;
   height: 30px;
