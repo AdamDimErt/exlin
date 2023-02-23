@@ -33,7 +33,7 @@ const Index = () => {
         left: '50%',
         transform: 'translate(-50%, -50%)',
         width: '90%',
-        maxWidth: 500,
+        maxWidth: 900,
         bgcolor: '#fff',
         border: '2px solid #fff',
         boxShadow: 1000,
@@ -83,7 +83,7 @@ const Index = () => {
                 <Box sx={style}>
     <div className={styles.box}>
         <Typography variant="h6" component="h2">
-            детали Накладной
+            Детали накладной
         </Typography>
         <p id="modal-modal-title">
             Номер накладной: {waybill?.code}
@@ -101,7 +101,7 @@ const Index = () => {
                             <div className={styles.searchBox} key={delivery.status}>
                                <p>Статус: {delivery.status == 'success'?  'Доставленно':  'Не доставленно'}</p>
                                 <p>{delivery.status == 'success'? `Принял товар:${delivery.receiver_name}`:  `Причина недоставки${delivery.description}`}</p>
-                                <div className={styles.underline}></div>
+                                <div className={delivery.status == 'success'?styles.underlineGreen:styles.underlineRed}></div>
                             </div>
 
                         ))}

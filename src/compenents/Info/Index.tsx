@@ -5,7 +5,7 @@ import styles from '@/styles/info.module.scss'
 
 const Index = () => {
     return (
-        <div>
+        <div id={'about-us'}>
             <h1 className={'title'}>О компании</h1>
              <div className={styles.container}>
                 <div className={styles.container__info}>

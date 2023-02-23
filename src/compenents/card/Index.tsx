@@ -29,7 +29,7 @@ const Index = () => {
         {title:'Надёжные перевозчики',text:'Все перевозчики проходят у нас проверку документов и подтверждение транспорта',src:avatarSvg,alt:'alt'},]
 
     return (
-        <div className={styles.advantaged}>
+        <div id={'advantages'} className={styles.advantaged}>
             <h1 className="title">Приемущества</h1>
 
             <div className={styles.advantaged__container}>

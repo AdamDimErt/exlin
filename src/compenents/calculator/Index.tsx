@@ -109,7 +109,7 @@ const Index = () => {
     }
     // @ts-ignore
     return (
-        <div id={'#Calc'} className={styles.calc}>
+        <div id='Calc' className={styles.calc}>
             <h1 className={'title'}>Калькулятор</h1>
             <div className={styles.calc__container}>
                 <form className={styles.calc__form} onSubmit={handleSubmit((data) => PostData(data))}>

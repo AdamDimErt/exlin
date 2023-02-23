@@ -26,8 +26,13 @@
   height: 100%;
   justify-content: space-around;
 }
-.underline{
+.underlineGreen{
   height: 1px;
   width: 100%;
-  border-bottom: 1px solid #000;
+  border-bottom: 1px solid green;
+}
+.underlineRed{
+  height: 1px;
+  width: 100%;
+  border-bottom: 1px solid red;
 }
