@@ -17,7 +17,7 @@ function Footer() {
     ];
 
     return (
-        <div>
+        <div id="my-section">
             <div className={styles.containerFull}>
                 <div className={styles.map}>
                     <YMaps>

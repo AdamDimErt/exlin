@@ -9,6 +9,9 @@ import { useMediaQuery } from '@mui/material';
 SwiperCore.use([Navigation, Pagination, Scrollbar, Autoplay, Mousewheel]);
 
 import kaspiSvg from '@/assets/company/kaspi.svg'
+import euBankSvg from '@/assets/company/eurasian-bank.svg'
+import astanaMotors from '@/assets/company/Astana_Motors_Logo.svg'
+import kazTransSvg from '@/assets/company/kaztranscom-logos-idhIXyImqO.png'
 import Image from "next/image";
 
 const slides = [
@@ -20,28 +23,19 @@ const slides = [
     {
         id: 2,
         title: 'Slide 2',
-        imageUrl: kaspiSvg,
+        imageUrl: euBankSvg,
     },
     {
         id: 3,
         title: 'Slide 3',
-        imageUrl: kaspiSvg,
+        imageUrl: astanaMotors,
     },
     {
         id: 4,
         title: 'Slide 4',
-        imageUrl: kaspiSvg,
+        imageUrl: kazTransSvg,
     },
-    {
-        id: 5,
-        title: 'Slide 5',
-        imageUrl: kaspiSvg,
-    },
-    {
-        id: 6,
-        title: 'Slide 6',
-        imageUrl: kaspiSvg,
-    },
+
 ];
 
 const Slider = () => {

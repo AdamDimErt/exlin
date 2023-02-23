@@ -83,7 +83,18 @@ a:focus,
 a:active {
     outline: none;
 }
+.scroll {
+    animation: scroll 1s ease;
+}
 
+@keyframes scroll {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-100%);
+    }
+}
 nav,
 footer,
 header,

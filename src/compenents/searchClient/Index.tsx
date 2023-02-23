@@ -7,8 +7,10 @@ import {Box} from "@mui/system";
 
 const Index = () => {
     const [number,setNumber] = useState(999999999)
-    const [waybill ,setWaybill ]=useState<any>({})
+    const [waybill ,setWaybill ]=useState<any | null>({})
     const [open, setOpen] = React.useState(false);
+    console.log(waybill)
+
     console.log(waybill)
     const getNumber = (event:any )=>{
         setNumber(event.target.value)
@@ -16,8 +18,12 @@ const Index = () => {
     const handleClose = () => setOpen(false);
     const getInfo=async ():Promise<any>=>{
         const result = await axios.get(`https://api.exline.systems/public/v1/tracking?waybill=${number}`)
-        setWaybill(result.data.waybill)
-        setOpen(true)
+        if (result.data && result.data.waybill) {
+            setWaybill(result.data.waybill)
+            setOpen(true)
+        } else {
+            setWaybill(null)
+        }
     }
 
     const style = {
@@ -37,18 +43,21 @@ const Index = () => {
         height:200
     };
     return (
-        <div className={''}>
-            <TextField type={'number'}
-                       label="Номер номеклатуры"
+      <>
+<div className={styles.numberBox}>
+    <TextField type={'number'}
+               label="Номер номеклатуры"
 
-                       variant="filled"
-                       color={'secondary'}
-                       className={styles.numberInput}
-                       onChange={(e) => setNumber(parseInt(e.target.value))}
-                       value={number}
+               variant="filled"
+               color={'secondary'}
+               className={styles.numberInput}
+               onChange={(e) => setNumber(parseInt(e.target.value))}
+               value={number}
 
-            />
-            <Button onClick={()=>getInfo()}>Open modal</Button>
+    />
+    <Button style={{color:'#Fff'}} onClick={()=>getInfo()}>Посмотреть Накладную</Button>
+
+</div>
             <Modal
                 open={open}
                 onClose={handleClose}
@@ -57,15 +66,15 @@ const Index = () => {
             >
                 <Box sx={style}>
                     <Typography id="modal-modal-title" variant="h6" component="h2">
-                        Номер накладной {waybill.code}
+                        Номер накладной {waybill?.code}
                     </Typography>
-                    <p>Отправитель:{waybill.sender?.title}</p>
-                    <p>Адресс отправления:{waybill.dest_region} {waybill.orig_address}</p>
-                    <p>Получатель:{waybill.receiver?.title}</p>
-                    <p>Вес поссылки:{waybill.weight}</p>
+                    <p>Отправитель:{waybill?.sender?.title}</p>
+                    <p>Адресс отправления:{waybill?.dest_region} {waybill?.orig_address}</p>
+                    <p>Получатель:{waybill?.receiver?.title}</p>
+                    <p>Вес поссылки:{waybill?.weight}</p>
                 </Box>
             </Modal>
-        </div>
+</>
     );
 };
 

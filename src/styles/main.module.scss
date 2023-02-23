@@ -3,15 +3,14 @@
   background-color: #006790;
   height: 100vh;
 
-    background-image:url("../assets/secondMain.png") ;
+    background-image:url("../assets/MainMain.png") ;
   background-repeat: no-repeat;
   background-size: cover  ;
   background-position: right center;
   &__left{
     width: 100%;
     color: #fff;
-    padding: 100px;
-
+margin: 100px 0 0 100px;
   }
   &__right{
     width: 50%;
@@ -28,5 +27,18 @@
   p{
     width: 400px;
     margin-bottom: 20px;
+  }
+}
+@media (max-width: 580px) {
+  .main__left_text {
+    h1 {
+      width: 300px;
+      font-size: 20px;
+    }
+  }
+  .main__left{
+    width: 100%;
+    color: #fff;
+    margin: 20px 0 0 20px;
   }
 }

@@ -11,6 +11,18 @@ function Header() {
         setIsMenuOpen(!isMenuOpen);
     };
 
+    const handleAnchorClick = (event:any) => {
+        event.preventDefault();
+        const targetId = event.currentTarget.getAttribute('href');
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+            targetElement.classList.add('scroll');
+            setTimeout(() => {
+                targetElement.classList.remove('scroll');
+            }, 1000);
+        }
+    };
+
     return (
         <header className={styles.header}>
             <div className={styles.logo}><Image width={80} height={80} src={logo} alt={'logo'}/></div>
@@ -22,7 +34,7 @@ function Header() {
             </div>
             <ul className={`${styles.menu} ${isMenuOpen ? styles.open : ''}`}>
                 <li>
-                    <a href="#">Главная</a>
+                    <a onClick={handleAnchorClick} href="#my-section" >Главная</a>
                 </li>
                 <li>
                     <a href="#">О нас</a>
