@@ -26,7 +26,7 @@ const cardObject:CardProps[] =[
     {title:'Отслеживание груза',text:'Схема отслеживая покажет где ваш груз',src:mapSvg,alt:'alt'},
     {title:'Оплата картой',text:'Оплата картой и Kaspi gold,а так жебольшой выбор других способов оплаты',src:cardSvg,alt:'alt'},
     {title:'Надёжные перевозчики',text:'Все перевозчики проходят у нас проверку документов и подтверждение транспорта',src:avatarSvg,alt:'alt'},]
-const Index:React.FC<CardProps> = () => {
+const Index = () => {
 
 
     return (
