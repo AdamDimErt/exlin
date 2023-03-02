@@ -47,7 +47,7 @@ type IPrice = {
     "max": string
 }
 
-const Index = () => {
+const Index:React.FC = () => {
     const [sendCities, setSendCities] = useState<City[]>([]);
     const [getCities, setGetCities] = useState<City[]>([]);
     const [price,setPrice] = useState<IPrice | undefined | null | any>({})

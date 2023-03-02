@@ -18,15 +18,16 @@ export interface CardProps{
     src:any;
     alt:string;
 }
-const Index = () => {
-    const cardObject:CardProps[] =[
+const cardObject:CardProps[] =[
 
-        {title:'Экономия времени',text:'Не надо звонит и вести долгие переговоры',src:timeSvg,alt:'alt'},
-        {title:'Гарантия цены',text:'Исполнитель не изменит цену и условия в последний момент',src:tengeSvg,alt:'alt'},
-        {title:'Страхование грузов',text:'Доставим ваш груз в целостности и сохраности',src:boxSvg,alt:'alt'},
-        {title:'Отслеживание груза',text:'Схема отслеживая покажет где ваш груз',src:mapSvg,alt:'alt'},
-        {title:'Оплата картой',text:'Оплата картой и Kaspi gold,а так жебольшой выбор других способов оплаты',src:cardSvg,alt:'alt'},
-        {title:'Надёжные перевозчики',text:'Все перевозчики проходят у нас проверку документов и подтверждение транспорта',src:avatarSvg,alt:'alt'},]
+    {title:'Экономия времени',text:'Не надо звонит и вести долгие переговоры',src:timeSvg,alt:'alt'},
+    {title:'Гарантия цены',text:'Исполнитель не изменит цену и условия в последний момент',src:tengeSvg,alt:'alt'},
+    {title:'Страхование грузов',text:'Доставим ваш груз в целостности и сохраности',src:boxSvg,alt:'alt'},
+    {title:'Отслеживание груза',text:'Схема отслеживая покажет где ваш груз',src:mapSvg,alt:'alt'},
+    {title:'Оплата картой',text:'Оплата картой и Kaspi gold,а так жебольшой выбор других способов оплаты',src:cardSvg,alt:'alt'},
+    {title:'Надёжные перевозчики',text:'Все перевозчики проходят у нас проверку документов и подтверждение транспорта',src:avatarSvg,alt:'alt'},]
+const Index:React.FC<CardProps> = () => {
+
 
     return (
         <div id={'advantages'} className={styles.advantaged}>

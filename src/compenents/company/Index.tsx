@@ -13,6 +13,7 @@ import euBankSvg from '@/assets/company/eurasian-bank.svg'
 import astanaMotors from '@/assets/company/Astana_Motors_Logo.svg'
 import kazTransSvg from '@/assets/company/kaztranscom-logos-idhIXyImqO.png'
 import Image from "next/image";
+import React from "react";
 
 const slides = [
     {
@@ -38,7 +39,7 @@ const slides = [
 
 ];
 
-const Slider = () => {
+const Slider:React.FC = () => {
     const isMobile = useMediaQuery('(max-width: 768px)');
     const slidesPerView = isMobile ? 1 : 3;
 

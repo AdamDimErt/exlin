@@ -6,7 +6,7 @@ import styles from '../../styles/card.module.scss'
 
 
 
-const Card = ({title,text,src,alt}:CardProps) => {
+const Card:React.FC<CardProps> = ({title,text,src,alt}:CardProps) => {
 
     return (
         <div className={styles.advantaged__block}>
