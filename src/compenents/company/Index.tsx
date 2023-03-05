@@ -60,7 +60,8 @@ const Slider:React.FC = () => {
                 ))}
 
                 <div className="swiper-pagination" />
-            </Swiper></>
+            </Swiper>
+        </>
 
     );
 };

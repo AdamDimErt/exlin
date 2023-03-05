@@ -9,9 +9,9 @@ const Index = () => {
     const [number,setNumber] = useState(999999999)
     const [waybill ,setWaybill ]=useState<any | null>({})
     const [open, setOpen] = React.useState(false);
-    console.log(waybill)
 
-    console.log(waybill)
+
+
     const getNumber = (event:any )=>{
         setNumber(event.target.value)
     }
@@ -71,6 +71,7 @@ const Index = () => {
                value={number}
 
     />
+    {!waybill?<p style={{color:"red"}}>накладная не найдена</p>:null}
     <Button style={{color:'#Fff'}} onClick={()=>getInfo()}>Посмотреть Накладную</Button>
 
 </div>

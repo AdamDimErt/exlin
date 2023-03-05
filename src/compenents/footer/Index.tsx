@@ -8,13 +8,13 @@ import MailOutlineIcon from '@mui/icons-material/MailOutline';
 
 function Footer() {
     const mapData = {
-        center: [55.751574, 37.573856],
-        zoom: 5,
+        center: [43.270098, 76.962075],
+        zoom: 15,
     };
 
     const coordinates = [
-        [55.684758, 37.738521],
-        [57.684758, 39.738521]
+        [43.270098, 76.962075],
+
     ];
 
     return (
